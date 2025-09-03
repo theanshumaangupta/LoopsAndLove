@@ -1,14 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect, useRef } from "react";
 export default function Slider() {
   const images = [
     "/images/slider2.jpg",
     "/images/slider3.jpg",
-    // "/images/slider2.jpg",
     "/images/slider5.webp",
   ];
   const [CurrentIndex, setCurrentIndex] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const sliderRef = useRef(null);
 
   function setNextSlide() {
     setCurrentIndex((prev) => {
@@ -23,18 +23,30 @@ export default function Slider() {
     };
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => setVisible(entries[0].isIntersecting),
+      { threshold: 0.1 }
+    );
+    if (sliderRef.current) {
+      observer.observe(sliderRef.current);
+    }
+
+    return () => {
+      if (sliderRef.current) observer.unobserve(sliderRef.current);
+    };
+  }, []);
+
   return (
-    <div className="h-screen relative w-full">
-      {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt=""
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-2000 ease-in-out ${
-            index === CurrentIndex ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+    <div
+      ref={sliderRef}
+      style={{ backgroundImage: `url(${images[CurrentIndex]})` }}
+      
+      className={`h-screen relative w-full ${
+        visible ? "opacity-100" : "opacity-50"
+      } bg-cover bg-position-center transition-all duration-1000 ease-in-out` }
+    >
+      
     </div>
   );
 }
