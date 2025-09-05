@@ -17,23 +17,24 @@ function Explore() {
           <div className="flex gap-5">
             <img className="w-12" src="/images/line-arrow.svg" alt="" />
             <img className="w-12" src="/images/line-arrow2.svg" alt="" />
+            
           </div>
         </div>
         <div className="flex gap-10">
           <div
-            style={{ backgroundImage: 'url("/images/shop-img-1.jpg")' }}
+            style={{ backgroundImage: 'url("/images/shop-img-7.jpg")' }}
             className="w-[25vw] h-[50vh] bg-cover"
           ></div>
           <div
-            style={{ backgroundImage: 'url("/images/shop-img-2.jpg")' }}
+            style={{ backgroundImage: 'url("/images/shop-img-8.jpg")' }}
             className="w-[25vw] h-[50vh] bg-cover"
           ></div>
           <div
-            style={{ backgroundImage: 'url("/images/shop-img-3.jpg")' }}
+            style={{ backgroundImage: 'url("/images/shop-img-9.jpg")' }}
             className="w-[25vw] h-[50vh] bg-cover"
           ></div>
           <div
-            style={{ backgroundImage: 'url("/images/shop-img-4.jpg")' }}
+            style={{ backgroundImage: 'url("/images/shop-img-6.jpg")' }}
             className="w-[25vw] h-[50vh] bg-cover"
           ></div>
         </div>
