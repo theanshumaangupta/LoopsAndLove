@@ -1,10 +1,11 @@
 
 function Journal() {
   return (
-    <div className="w-full p-10 min-h-screen bg-[#F3F0EC] text-black ">
+    <div className="w-full p-10 items-stretch min-h-screen bg-[#F3F0EC] text-black ">
       <h1 className="text-3xl mb-10 ">Journal Our Story</h1>
-      <div className=" flex justify-center items-start gap-5">
-        <div className="min-h-[60vh] flex-2 text-black">
+      <div className=" flex justify-center items-stretch min-h-[60vh] gap-5">
+
+        <div className=" flex flex-col flex-2 text-black">
           {/* image div with date tag */}
           <div
             style={{ backgroundImage: "url('images/post-img-1.jpg')" }}
@@ -30,7 +31,9 @@ function Journal() {
           </div>
         </div>
 
-        <div className="min-h-[60vh] flex-1">
+        <div className="w-[1px] bg-black" ></div>
+
+        <div className=" flex flex-col flex-1">
           <div
             style={{ backgroundImage: "url('images/post-list-1-img-1.jpg')" }}
             className=" relative bg-cover bg-center min-h-[60vh] flex-1"
@@ -52,7 +55,7 @@ function Journal() {
           </div>
         </div>
 
-        <div className="min-h-[60vh] flex-1">
+        <div className=" flex flex-col flex-1">
           <div
             style={{ backgroundImage: "url('images/post-list-1-img-3.jpg')" }}
             className="relative bg-cover bg-center min-h-[60vh] flex-1"
@@ -73,6 +76,7 @@ function Journal() {
             <p>Read More</p>
           </div>
         </div>
+
       </div>
     </div>
   );
