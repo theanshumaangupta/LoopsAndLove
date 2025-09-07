@@ -4,6 +4,7 @@ function Explore() {
   return (
     <div className="bg-[#F3F0EC] text-black">
       <div className="px-20 py-30  text-black">
+        {/* Explore Heading */}
         <div className="flex justify-between text-3xl min-h-[8rem] ">
           <div>
             <p
@@ -20,6 +21,7 @@ function Explore() {
             
           </div>
         </div>
+        {/* Images slides  */}
         <div className="flex gap-10">
           <div
             style={{ backgroundImage: 'url("/images/shop-img-7.jpg")' }}
@@ -39,6 +41,8 @@ function Explore() {
           ></div>
         </div>
       </div>
+
+      {/* SKetchy CAtegories like biodegraduate */}
       <div className=" flex flex-col gap-10 items-center justify-center">
         <h1 style={{fontFamily: 'Merriweather', fontWeight: '300'}} className=" text-3xl md:text-4xl font-serif font-bold" >Best of Handmade Goods</h1>
         <img style={{filter: 'invert(1)'}} src="images/thread.png" alt="" />

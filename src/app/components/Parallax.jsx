@@ -22,11 +22,10 @@ export default function Parallax() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <div
       ref={parallaxRef}
-      className="parallax"
+      className="parallax flex items-center justify-center flex-col text-center gap-10 text-white"
       style={{
         height: "30vw",
         backgroundImage: "url('images/h1-img-8.jpg')",
@@ -34,7 +33,11 @@ export default function Parallax() {
         backgroundSize: "120%",
         backgroundPosition: "center",
         transition: "background-position 0.01s ease-in-out",
+        fontFamily: "Merriweather",
       }}
-    ></div>
+    >
+      <h1  className="text-5xl max-w-[50vw]">Handmade Knitwear That Are Made With Love</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit soutr.</p>
+    </div>
   );
 }

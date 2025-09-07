@@ -2,7 +2,7 @@ function Instagram() {
   return (
     <div
       style={{ fontFamily: "Merriweather" }}
-      className="w-full gap-10 text-3xl bg-white p-30 text-[#090909] min-h-[50vh] flex flex-col items-center justify-center"
+      className="w-full gap-10 text-3xl bg-[#F3F0EC] py-30 px-10 text-[#090909] min-h-[50vh] flex flex-col items-center justify-center"
     >
       <p>Instagram Story</p>
       <img src="images/arrow.png" className="h-10" alt="" />
