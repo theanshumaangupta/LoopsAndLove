@@ -1,0 +1,17 @@
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+
+.mask-gradient {
+  -webkit-mask: linear-gradient(90deg, transparent 5%, black 20%, black 80%, transparent);
+  mask: linear-gradient(90deg, transparent 5%, black 20%, black 80%, transparent);
+}
