@@ -1,18 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { Roboto } from "next/font/google";
-import { Merriweather } from "next/font/google";
-
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "700"], 
-});
 
 
-const merriweather = Merriweather({
-  subsets: ["latin"],
-  weight: ["400", "700"], // choose weights you need
-});
 
 
 export default function Slider() {
@@ -55,7 +44,6 @@ export default function Slider() {
   return (
     <div
       ref={sliderRef}
-      // backgroundSize: `${visible ? '100vw 100vh' : '100vw 105vh'}`
       style={{ backgroundImage: `url(${images[CurrentIndex]})`, backgroundPosition: `${visible ? '0 -2vh' : '0 0'}` }}
       
       className={`h-screen relative w-full ${
@@ -70,7 +58,7 @@ export default function Slider() {
         <p>Shop</p>
       </div>
       <div className=" flex flex-col items-center  gap-5 justify-center text-center absolute bottom-1/4 m-auto w-full text-5xl " >
-        <h1 style={{fontFamily: "Merriweather"}} className="inline-block w-[40rem] leading-[67px] text-[50px] ">Natural Wool For Comfy Winter Clothes</h1>
+        <h1 style={{fontFamily: "Merriweather"}} className="inline-block w- leading-snug text-3xl md:text-5xl ">Natural Wool For Comfy Winter Clothes</h1>
         <p className="text-[1rem]" style={{fontFamily: 'Roboto'}}>Lorem ipsum dolor sit, consectuer adipliscing elit.</p>
         <img src="/images/thread.png" alt="" />
       </div>

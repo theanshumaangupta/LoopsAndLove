@@ -3,7 +3,7 @@ import "./explore.css";
 function Explore() {
   return (
     <div className="bg-[#F3F0EC] text-black">
-      <div className="px-20 py-30  text-black">
+      <div className="px-5 md:px-20 py-10 md:py-30  text-black">
         {/* Explore Heading */}
         <div className="flex justify-between text-3xl min-h-[8rem] ">
           <div>

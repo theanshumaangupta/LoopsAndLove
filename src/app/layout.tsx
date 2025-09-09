@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Roboto } from "next/font/google";
+import { Merriweather } from "next/font/google";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"], 
+});
+
+
+const merriweather = Merriweather({
+  subsets: ["latin"],
+  weight: ["400", "700"], // choose weights you need
+});
 
 export const metadata: Metadata = {
   title: "Handcraft",

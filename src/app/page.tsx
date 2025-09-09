@@ -9,7 +9,7 @@ import Instagram from "./components/Instagram";
 import Footer from "./components/Footer";
 export default function Home() {
   return( 
-    <div className="min-h-screen w-full ">
+    <div className="min-h-screen w-full overflow-x-hidden ">
       <Slider />
       <Explore/>
       <Banner2/>
