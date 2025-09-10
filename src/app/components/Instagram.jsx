@@ -6,7 +6,7 @@ function Instagram() {
     >
       <p>Instagram Story</p>
       <img src="images/arrow.png" className="h-10" alt="" />
-      <div className="flex w-full max-w-[110rem] flex-wrap justify-center items-center gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-6 w-full max-w-[110rem] flex-wrap justify-center items-center gap-3">
         <div style={{backgroundImage: 'url("images/insta-gllery-1.jpg")'}} className="bg-cover bg-center flex-1 min-h-[30vh]" ></div>
         <div style={{backgroundImage: 'url("images/insta-gllery-2.jpg")'}} className="bg-cover bg-center flex-1 min-h-[30vh]" ></div>
         <div style={{backgroundImage: 'url("images/insta-gllery-3.jpg")'}} className="bg-cover bg-center flex-1 min-h-[30vh]" ></div>
