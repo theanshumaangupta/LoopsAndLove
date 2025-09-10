@@ -3,7 +3,7 @@ function Journal() {
     <div className="w-full p-10 bg-[#F3F0EC] text-black">
       <h1 className="text-3xl mb-10">Journal Our Story</h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         {/* Journal Item 1 */}
         <div className="flex flex-col">
