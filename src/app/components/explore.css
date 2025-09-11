@@ -1,18 +1,26 @@
-@keyframes slide {
-  0% {
-    transform: translateX(0);
+@keyframes smooth-step-slide {
+  0%, 10% {
+    transform: translateX(0%);
   }
-  100% {
+  20%, 30% {
+    transform: translateX(-16.66%);
+  }
+  40%, 50% {
+    transform: translateX(-33.33%);
+  }
+  60%, 70% {
     transform: translateX(-50%);
   }
+  80%, 90% {
+    transform: translateX(-66.66%);
+  }
+  100% {
+    transform: translateX(-83.33%);
+  }
 }
 
-.animate-slide {
-  animation: slide 4s linear infinite;
+.animate-step-slide {
+  display: flex;
+  animation: smooth-step-slide 10s infinite;
+  animation-timing-function: ease-in-out;
 }
-
-.mask-gradient {
-  -webkit-mask: linear-gradient(90deg, transparent 5%, black 20%, black 80%, transparent);
-  mask: linear-gradient(90deg, transparent 5%, black 20%, black 80%, transparent);
-}
-
