@@ -30,7 +30,7 @@ export default function Slider() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => setVisible(entries[0].isIntersecting),
-      { threshold: 0.5}
+      { threshold: 0.7}
     );
     if (sliderRef.current) {
       observer.observe(sliderRef.current);
@@ -44,7 +44,7 @@ export default function Slider() {
   return (
     <div
       ref={sliderRef}
-      style={{ backgroundImage: `url(${images[CurrentIndex]})`, backgroundPosition: `${visible ? '0 -2vh' : '0 0'}` }}
+      style={{ backgroundImage: `url(${images[CurrentIndex]})`, backgroundPosition: `${visible ? 'center -2vh' : 'center 0'}` }}
 
       className={`h-screen relative w-full ${visible ? "opacity-100" : "opacity-50 "
         } bg-cover transition-all duration-2000 ease-in-out`}

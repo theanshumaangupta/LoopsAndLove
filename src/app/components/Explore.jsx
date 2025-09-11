@@ -71,7 +71,7 @@ function Explore() {
         {/* Heading */}
         <div className="flex justify-between text-3xl min-h-[8rem]">
           <div>
-            <p style={{ fontFamily: "Merriweather,serif" }} className="mb-5 text-3xl tracking-widest">
+            <p style={{ fontFamily: "Merriweather,serif" }} className="mb-5 text-xl sm:text-3xl tracking-widest">
               Explore New Arrivals
             </p>
             <p className="text-base">Shop Now</p>
