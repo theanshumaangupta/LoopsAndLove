@@ -45,21 +45,21 @@ export default function Slider() {
     <div
       ref={sliderRef}
       style={{ backgroundImage: `url(${images[CurrentIndex]})`, backgroundPosition: `${visible ? '0 -2vh' : '0 0'}` }}
-      
-      className={`h-screen relative w-full ${
-        visible ? "opacity-100" : "opacity-50 "
-      } bg-cover transition-all duration-2000 ease-in-out` }
+
+      className={`h-screen relative w-full ${visible ? "opacity-100" : "opacity-50 "
+        } bg-cover transition-all duration-2000 ease-in-out`}
     >
-      <div className="pt-10 pl-14 top-0 left-0 flex flex-col gap-3 uppercase" style={{fontFamily : 'Roboto'}} >
+      <div className="pt-10 pl-14 top-0 left-0 flex flex-col gap-3 uppercase" style={{ fontFamily: 'Roboto' }} >
         <p>Home</p>
         <p>About</p>
-        <p>Contact</p>  
+        <p>Contact</p>
         <p>Pages</p>
         <p>Shop</p>
       </div>
-      <div className=" flex flex-col items-center  gap-5 justify-center text-center absolute bottom-1/4 m-auto w-full text-5xl " >
-        <h1 style={{fontFamily: "Merriweather"}} className="inline-block w- leading-snug text-3xl md:text-5xl ">Natural Wool For Comfy Winter Clothes</h1>
-        <p className="text-[1rem]" style={{fontFamily: 'Roboto'}}>Lorem ipsum dolor sit, consectuer adipliscing elit.</p>
+      <div className={`${visible ? "opacity-100 bottom-[25%]" : "opacity-50 bottom-[20%] "
+        } flex flex-col items-center  transition-all duration-1000 linear  gap-5 justify-center text-center absolute  m-auto w-full text-5xl `} >
+        <h1 style={{ fontFamily: "Merriweather" }} className="inline-block w- leading-snug text-3xl md:text-5xl ">Natural Wool For Comfy Winter Clothes</h1>
+        <p className="text-[1rem]" style={{ fontFamily: 'Roboto' }}>Lorem ipsum dolor sit, consectuer adipliscing elit.</p>
         <img src="/images/thread.png" alt="" />
       </div>
     </div>
