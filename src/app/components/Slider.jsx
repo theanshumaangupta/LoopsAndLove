@@ -30,7 +30,7 @@ export default function Slider() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => setVisible(entries[0].isIntersecting),
-      { threshold: 1 }
+      { threshold: 0.5}
     );
     if (sliderRef.current) {
       observer.observe(sliderRef.current);
@@ -57,7 +57,7 @@ export default function Slider() {
         <p>Shop</p>
       </div>
       <div className={`${visible ? "opacity-100 bottom-[25%]" : "opacity-50 bottom-[20%] "
-        } flex flex-col items-center  transition-all duration-1000 linear  gap-5 justify-center text-center absolute  m-auto w-full text-5xl `} >
+        } p-[25px] flex flex-col items-center  transition-all duration-1000 linear  gap-5 justify-center text-center absolute  m-auto w-full text-5xl `} >
         <h1 style={{ fontFamily: "Merriweather" }} className="inline-block w- leading-snug text-3xl md:text-5xl ">Natural Wool For Comfy Winter Clothes</h1>
         <p className="text-[1rem]" style={{ fontFamily: 'Roboto' }}>Lorem ipsum dolor sit, consectuer adipliscing elit.</p>
         <img src="/images/thread.png" alt="" />
