@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <div className="bg-[#F3F0EC] text-black p-4 w-full text-center">
-      <hr />
+      {/* <hr /> */}
       <div className="block justify-between flex-wrap">
         {/* Email Newsletter */}
         <div className="m-5 flex flex-col sm:items-start gap-6 p-2 md:p-10">
@@ -22,7 +22,7 @@ export default function Footer() {
       <hr />
       <footer>
         <p className="text-left p-5">
-          © 2025 All rights reserved | Designed by Anshumaan Gupta
+          © 2025 All rights reserved | Code by Anshumaan Gupta
         </p>
       </footer>
     </div>

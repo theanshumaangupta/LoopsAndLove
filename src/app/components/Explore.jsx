@@ -66,7 +66,7 @@ function Explore() {
   const progressPercent = ((currentIndex % totalItems) / (totalItems - 1)) * 100;
 
   return (
-    <div className="bg-[#F3F0EC] text-black">
+    <div className="bg-[#F3F0EC] text-black  ">
       <div className="px-5 xl:px-20 py-10 md:py-30 text-black">
         {/* Heading */}
         <div className="flex justify-between text-3xl min-h-[8rem]">
@@ -98,7 +98,7 @@ function Explore() {
             {images.map((src, index) => (
               <div
                 key={index}
-                className="flex-none mx-auto w-[50vw] sm:w-[33vw] md:w-1/4 h-[50vw] sm:h-[33vw] md:h-[25vw] bg-cover bg-center"
+                className="flex-none mx-auto w-[80vw] sm:w-[70vw] md:w-[60vw] h-[25rem] sm:h-[35rem] md:h-[35rem] lg:w-[25%] lg:h-[25rem] bg-cover bg-center"
                 style={{ backgroundImage: `url("${src}")` }}
               ></div>
             ))}

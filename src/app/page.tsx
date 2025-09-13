@@ -7,6 +7,7 @@ import Journal from "./components/Journal";
 import Parallax from "./components/Parallax";
 import Instagram from "./components/Instagram";
 import Footer from "./components/Footer";
+import About from "./components/About";
 export default function Home() {
   return( 
     <div className="min-h-screen w-full overflow-x-hidden ">
@@ -17,6 +18,7 @@ export default function Home() {
       <Journal/>
       <Parallax/>
       <Instagram/>
+      <About/>
       <Footer/>
 
     </div>
