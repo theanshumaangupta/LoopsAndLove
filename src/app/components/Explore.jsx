@@ -17,6 +17,9 @@ function Explore() {
     "/images/shop-img-7.jpg",
     "/images/shop-img-8.jpg",
   ];
+
+  const prices = ["$29.99", "$49.99", "$19.99", "$39.99", "$24.99", "$34.99"];
+
   const trackRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalItems = images.length;
@@ -72,7 +75,7 @@ function Explore() {
   const progressPercent = ((currentIndex % totalItems) / (totalItems - 1)) * 100;
 
   return (
-    <div className="bg-[#F3F0EC] text-black  ">
+    <div className="bg-[#F3F0EC] text-black">
       <div className="px-5 xl:px-20 py-10 md:py-30 text-black">
         {/* Heading */}
         <div className="flex justify-between text-3xl min-h-[8rem]">
@@ -83,18 +86,8 @@ function Explore() {
             <p className="text-base">Shop Now</p>
           </div>
           <div className="flex gap-5">
-            <img
-              className="w-12 cursor-pointer"
-              src="/images/line-arrow.svg"
-              alt="Left"
-              onClick={prevSlide}
-            />
-            <img
-              className="w-12 cursor-pointer"
-              src="/images/line-arrow2.svg"
-              alt="Right"
-              onClick={nextSlide}
-            />
+            <img className="w-12 cursor-pointer" src="/images/line-arrow.svg" alt="Left" onClick={prevSlide} />
+            <img className="w-12 cursor-pointer" src="/images/line-arrow2.svg" alt="Right" onClick={nextSlide} />
           </div>
         </div>
 
@@ -104,20 +97,29 @@ function Explore() {
             {images.map((src, index) => (
               <div
                 key={index}
-                className="flex-none mx-auto w-[80vw] sm:w-[70vw] md:w-[60vw] h-[25rem] sm:h-[35rem] md:h-[35rem] lg:w-[25%] lg:h-[25rem] bg-cover bg-center"
-                style={{ backgroundImage: `url("${src}")` }}
-              ></div>
+                className="relative flex-none mx-auto w-[80vw] sm:w-[70vw] md:w-[60vw] h-[25rem] sm:h-[35rem] md:h-[35rem] lg:w-[25%] lg:h-[25rem]"
+              >
+                <div
+                  className="w-full h-full bg-cover bg-center rounded-lg shadow-md"
+                  style={{ backgroundImage: `url("${src}")` }}
+                ></div>
+
+                {/* Price tag */}
+                <div className="absolute bottom-4 left-4 bg-white bg-opacity-70 text-black px-3 py-1 rounded">
+                  {prices[index]}
+                </div>
+              </div>
             ))}
           </div>
-
         </div>
-          {/* Progress Bar */}
-          {/* <div className="relative mt-5 bottom-2 left-0 w-full h-2 bg-[#F3F0EC] rounded-full">
-            <div
-              className="h-2 bg-[#ffcfcf] rounded-full transition-all duration-300"
-              style={{ width: `${progressPercent}%` }}
-            ></div>
-          </div> */}
+
+        {/* Progress Bar */}
+        {/* <div className="relative mt-5 bottom-2 left-0 w-full h-2 bg-[#F3F0EC] rounded-full">
+          <div
+            className="h-2 bg-[#ffcfcf] rounded-full transition-all duration-300"
+            style={{ width: `${progressPercent}%` }}
+          ></div>
+        </div> */}
       </div>
     </div>
   );
