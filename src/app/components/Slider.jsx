@@ -9,8 +9,7 @@ export default function Slider() {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visible, setVisible] = useState(false);
-  const sliderRef = useRef(null);
+
 
   function setNextSlide() {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -21,6 +20,8 @@ export default function Slider() {
     return () => clearInterval(interval);
   }, []);
 
+  const sliderRef = useRef(null);
+  const [visible, setVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => setVisible(entries[0].isIntersecting),
@@ -39,14 +40,14 @@ export default function Slider() {
   return (
     <div
       ref={sliderRef}
-      className={`h-screen relative w-full overflow-hidden`}
+      className={`h-screen relative w-full overflow-hidden duration-1000 ease-in-out ${visible ? "border-10" : "border-0"} `}
     >
       {images.map((src, index) => (
         <div
           key={index}
           style={{
             backgroundImage: `url(${src})`,
-            backgroundPosition: "center -2vh",
+            backgroundPosition: "center",
             backgroundSize: "cover",
           }}
           className={`absolute top-0 left-0 w-full h-full transition-opacity duration-2000 ease-in-out ${
@@ -55,13 +56,13 @@ export default function Slider() {
         />
       ))}
 
-      <div className="pt-10 pl-14 top-0 left-0 flex flex-col gap-3 uppercase" style={{ fontFamily: "Roboto" }}>
+      {/* <div className="pt-10 pl-14 top-0 left-0 flex flex-col gap-3 uppercase" style={{ fontFamily: "Roboto" }}>
         <p>Home</p>
         <p>About</p>
         <p>Contact</p>
         <p>Pages</p>
         <p>Shop</p>
-      </div>
+      </div> */}
 
       <div
         className={`${

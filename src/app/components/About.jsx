@@ -1,4 +1,6 @@
 export default function About() {
+    
+
     return (
         <div className="bg-[#ffffff] p-5  md:p-10">
             {/* <div className="h-[0.5px] w-full bg-black"></div> */}
