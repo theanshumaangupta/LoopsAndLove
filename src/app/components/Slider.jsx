@@ -1,37 +1,32 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 
-
-
-
 export default function Slider() {
   const images = [
     "/images/rs1.jpg",
     "/images/rs2.jpg",
     "/images/rs3.jpg",
   ];
-  const [CurrentIndex, setCurrentIndex] = useState(0);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [visible, setVisible] = useState(false);
   const sliderRef = useRef(null);
 
   function setNextSlide() {
-    setCurrentIndex((prev) => {
-      return (prev + 1) % images.length;
-    });
+    setCurrentIndex((prev) => (prev + 1) % images.length);
   }
 
   useEffect(() => {
-    const interval = setInterval(setNextSlide, 2000);
-    return () => {
-      clearInterval(interval);
-    };
+    const interval = setInterval(setNextSlide, 4000); // Increased interval for visibility
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => setVisible(entries[0].isIntersecting),
-      { threshold: 0.7}
+      { threshold: 0.7 }
     );
+
     if (sliderRef.current) {
       observer.observe(sliderRef.current);
     }
@@ -44,22 +39,40 @@ export default function Slider() {
   return (
     <div
       ref={sliderRef}
-      style={{ backgroundImage: `url(${images[CurrentIndex]})`, backgroundPosition: `${visible ? 'center -2vh' : 'center 0'}` }}
-
-      className={`h-screen relative w-full ${visible ? "opacity-100" : "opacity-50 "
-        } bg-cover transition-all duration-2000 ease-in-out`}
+      className={`h-screen relative w-full overflow-hidden`}
     >
-      <div className="pt-10 pl-14 top-0 left-0 flex flex-col gap-3 uppercase" style={{ fontFamily: 'Roboto' }} >
+      {images.map((src, index) => (
+        <div
+          key={index}
+          style={{
+            backgroundImage: `url(${src})`,
+            backgroundPosition: "center -2vh",
+            backgroundSize: "cover",
+          }}
+          className={`absolute top-0 left-0 w-full h-full transition-opacity duration-2000 ease-in-out ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+
+      <div className="pt-10 pl-14 top-0 left-0 flex flex-col gap-3 uppercase" style={{ fontFamily: "Roboto" }}>
         <p>Home</p>
         <p>About</p>
         <p>Contact</p>
         <p>Pages</p>
         <p>Shop</p>
       </div>
-      <div className={`${visible ? "opacity-100 bottom-[25%]" : "opacity-50 bottom-[20%] "
-        } p-[25px] flex flex-col items-center  transition-all duration-1000 linear  gap-5 justify-center text-center absolute  m-auto w-full text-5xl `} >
-        <h1 style={{ fontFamily: "Merriweather" }} className="inline-block w- leading-snug text-3xl md:text-5xl ">Natural Wool For Comfy Winter Clothes</h1>
-        <p className="text-[1rem]" style={{ fontFamily: 'Roboto' }}>Lorem ipsum dolor sit, consectuer adipliscing elit.</p>
+
+      <div
+        className={`${
+          visible ? "opacity-100 bottom-[25%]" : "opacity-50 bottom-[20%]"
+        } p-[25px] flex flex-col items-center transition-all duration-1000 linear gap-5 justify-center text-center absolute m-auto w-full text-5xl`}
+        style={{ fontFamily: "Roboto" }}
+      >
+        <h1 style={{ fontFamily: "Merriweather" }} className="inline-block leading-snug text-3xl md:text-5xl text-center">
+          Natural Wool For Comfy Winter Clothes
+        </h1>
+        <p className="text-[1rem]">Lorem ipsum dolor sit, consectuer adipliscing elit.</p>
         <img src="/images/thread.png" alt="" />
       </div>
     </div>
