@@ -12,37 +12,75 @@ function Instagram() {
   ];
 
   const scrollRef = useRef(null);
+  const slideRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [progress, setProgress] = useState(0);
 
-  const handleScroll = (direction) => {
+  const slideDuration = 10 * 1000; // 10 seconds per slide
+
+  const getSlideWidth = () => {
+    return slideRef.current?.offsetWidth || 0;
+  };
+
+  const goToSlide = (index) => {
     if (scrollRef.current) {
-      let newIndex;
-      if (direction === "left") {
-        newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-      } else {
-        newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-      }
-
-      const scrollAmount = scrollRef.current.offsetWidth * 0.7;
-      const newScrollPosition = newIndex * scrollAmount;
+      const slideWidth = getSlideWidth();
+      const newScrollPosition = index * (slideWidth + 12); // 12 = gap (gap-3 in Tailwind)
 
       scrollRef.current.scrollTo({
         left: newScrollPosition,
         behavior: "smooth",
       });
 
-      setCurrentIndex(newIndex);
+      setCurrentIndex(index);
+      setProgress(0); // Reset progress bar
     }
   };
+
+  const handleScroll = (direction) => {
+    let newIndex =
+      direction === "left"
+        ? currentIndex === 0
+          ? images.length - 1
+          : currentIndex - 1
+        : currentIndex === images.length - 1
+          ? 0
+          : currentIndex + 1;
+
+    goToSlide(newIndex);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIndex = (currentIndex + 1) % images.length;
+      goToSlide(nextIndex);
+    }, slideDuration);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  useEffect(() => {
+    let startTime = Date.now();
+    const updateProgress = () => {
+      const elapsed = Date.now() - startTime;
+      const newProgress = Math.min((elapsed / slideDuration) * 100, 100);
+      setProgress(newProgress);
+
+      if (newProgress < 100) {
+        requestAnimationFrame(updateProgress);
+      }
+    };
+
+    updateProgress();
+  }, [currentIndex]);
 
   useEffect(() => {
     const handleManualScroll = () => {
       if (scrollRef.current) {
-        const index = Math.round(
-          scrollRef.current.scrollLeft /
-            (scrollRef.current.offsetWidth * 0.7)
-        );
+        const slideWidth = getSlideWidth() + 12;
+        const index = Math.round(scrollRef.current.scrollLeft / slideWidth);
         setCurrentIndex(index);
+        setProgress(0);
       }
     };
 
@@ -54,7 +92,7 @@ function Instagram() {
   return (
     <div
       style={{ fontFamily: "Merriweather" }}
-      className="w-full gap-10 text-3xl bg-[#F3F0EC] py-30 px-10 text-[#090909] min-h-[80vh] flex flex-col items-center justify-center"
+      className="w-full gap-10 text-3xl bg-[#F3F0EC] py-30 px-5 text-[#090909] min-h-[80vh] flex flex-col items-center justify-center"
     >
       <p>Instagram Story</p>
       <img src="images/arrow.png" className="h-10 mb-6" alt="Arrow" />
@@ -78,15 +116,24 @@ function Instagram() {
           {images.map((_, index) => (
             <div
               key={index}
-              className={`h-1 rounded ${
-                index <= currentIndex
-                  ? "bg-black"
-                  : "bg-gray-400"
-              } transition-all duration-300`}
+              className="h-1 rounded bg-gray-400 relative overflow-hidden"
               style={{ width: `${100 / images.length}%` }}
-            ></div>
+            >
+              {/* Current slide fill */}
+              {index === currentIndex && (
+                <div
+                  key={currentIndex} //  forces re-render to restart animation
+                  className="absolute top-0 left-0 h-full bg-[#000000] opacity-70 animate-progress"
+                />
+              )}
+              {/* Past slides fully filled */}
+              {index < currentIndex && (
+                <div className="absolute top-0 left-0 h-full w-full bg-black opacity-70" />
+              )}
+            </div>
           ))}
         </div>
+
 
         {/* Left Tap Area */}
         <div
@@ -109,8 +156,9 @@ function Instagram() {
           {images.map((src, index) => (
             <div
               key={index}
+              ref={index === 0 ? slideRef : null} // Get exact width from first element
               style={{ backgroundImage: `url("${src}")` }}
-              className="bg-cover bg-center min-w-[70vw] aspect-[9/16] rounded-lg shadow-md snap-center flex-shrink-0"
+              className="bg-cover bg-center min-w-[80vw] aspect-[9/16] rounded-lg shadow-md snap-center flex-shrink-0"
             ></div>
           ))}
         </div>
