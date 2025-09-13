@@ -6,12 +6,12 @@ function Banner2() {
     >
       <img
         className="hidden md:block w-[20rem] absolute top-[3rem] left-[3rem]"
-        src="/images/banner2-1.jpg"
+        src="/images/off-1.jpg"
         alt=""
       />
       <img
         className="hidden md:block w-[20rem] absolute bottom-[3rem] right-[3rem]"
-        src="/images/banner2-2.jpg"
+        src="/images/off-2.jpg"
         alt=""
       />
       <div className="absolute flex flex-col gap-4 left-4 md:left-10 bottom-10 ">

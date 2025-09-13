@@ -4,6 +4,12 @@ import "./explore.css";
 
 function Explore() {
   const images = [
+    // "/images/explore-a-1.jpg",
+    // "/images/explore-a-3.jpg",
+    // "/images/explore-a-4.jpg",
+    // "/images/explore-a-2.jpg",
+    // "/images/explore-a-5.jpg",
+    // "/images/explore-a-6.jpg",
     "/images/shop-img-2.jpg",
     "/images/shop-img-3.jpg",
     "/images/shop-img-5.jpg",

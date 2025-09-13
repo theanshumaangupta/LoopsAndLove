@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 export default function Slider() {
   const images = [
-    "/images/slide1.jpg",
+    "/images/rs1.jpg",
     "/images/rs2.jpg",
     "/images/rs3.jpg",
   ];
