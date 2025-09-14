@@ -6,7 +6,7 @@ const Whatsapp = () => {
 
     // IMPORTANT: Replace this with your client's actual WhatsApp phone number.
     // Use the international format without any plus signs or special characters.
-    const phoneNumber = '1234567890'; // Example: '1234567890' for +1 (234) 567-890
+    const phoneNumber = '918858684812'; // Example: '1234567890' for +1 (234) 567-890
 
     const handleSendMessage = () => {
         if (message.trim()) {
@@ -26,7 +26,7 @@ const Whatsapp = () => {
             <h1 style={{ fontFamily: "Merriweather" }} className='text-black text-2xl md:text-4xl font-bold mb-[2rem] md:hidden'>WhatsApp Us</h1>
 
             {/* Main Two-Panel Container for desktop */}
-            <div className="flex w-full md:max-w-7xl h-[90vh] rounded-2xl shadow-xl overflow-hidden">
+            <div className="flex w-full md:max-w-7xl h-[85vh] md:h-[90vh] rounded-2xl shadow-xl overflow-hidden">
                 
                 {/* Left Panel (Hidden on mobile) */}
                 <div className="hidden md:flex flex-col w-full md:w-1/3 bg-white border-r border-gray-200">
