@@ -75,7 +75,7 @@ function Explore() {
   const progressPercent = ((currentIndex % totalItems) / (totalItems - 1)) * 100;
 
   return (
-    <div className="bg-[#F3F0EC] text-black">
+    <div id="explore" className="bg-[#F3F0EC] text-black">
       <div className="px-5 xl:px-20 py-10 md:py-30 text-black">
         {/* Heading */}
         <div className="flex justify-between text-3xl min-h-[8rem]">

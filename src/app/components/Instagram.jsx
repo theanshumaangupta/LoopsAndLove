@@ -113,7 +113,7 @@ function Instagram() {
             className={`
               bg-cover bg-center min-h-[60vh] rounded-lg shadow-md
               transition-all duration-500
-              ${index === currentIndex ? "opacity-100 blur-0 scale-105" : "opacity-60 blur-sm scale-95"}
+              ${index === currentIndex ? "opacity-100 scale-100" : "opacity-60 scale-95"}
             `}
           ></div>
         ))}

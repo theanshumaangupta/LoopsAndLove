@@ -8,6 +8,8 @@ import Parallax from "./components/Parallax";
 import Instagram from "./components/Instagram";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import Whatsapp from "./components/Whatsapp";
+import Contact from "./components/Contact";
 export default function Home() {
   return( 
     <div className="min-h-screen w-full overflow-x-hidden ">
@@ -19,6 +21,8 @@ export default function Home() {
       <Parallax/>
       <Instagram/>
       <About/>
+      <Whatsapp/>
+      {/* <Contact/> */}
       <Footer/>
 
     </div>

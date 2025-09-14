@@ -36,7 +36,7 @@ export default function Parallax() {
         fontFamily: "Merriweather",
       }}
     >
-      <h1  className="text-xs sm:text-2xl md:text-4xl lg:text-5xl max-w-[50vw]">Handmade Knitwear That Are Made With Love</h1>
+      <h1  className="text-xs leading-[4rerm] sm:text-2xl md:text-4xl lg:text-5xl max-w-[50vw]">Handmade Knitwear That Are Made With Love</h1>
       <p className="text-xs sm:text-1xl max-w-[60%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit soutr.</p>
     </div>
   );

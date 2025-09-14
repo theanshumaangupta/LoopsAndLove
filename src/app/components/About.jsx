@@ -2,7 +2,7 @@ export default function About() {
     
 
     return (
-        <div className="bg-[#ffffff] p-5  md:p-10">
+        <div id="about" className="bg-[#ffffff] p-5  md:p-10">
             {/* <div className="h-[0.5px] w-full bg-black"></div> */}
             <h1 className="text-black text-2xl p-5 text-center bold md:text-4xl my-5">About Me</h1>
             <div className="gap-10  w-auto flex flex-col  items-center  lg:flex-row  ">

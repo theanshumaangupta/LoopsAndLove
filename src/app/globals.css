@@ -35,3 +35,6 @@ body {
 .animate-progress {
   animation: progressFill 10s linear forwards;
 }
+html {
+  scroll-behavior: smooth;
+}
