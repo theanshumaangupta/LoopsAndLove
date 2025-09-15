@@ -27,7 +27,7 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: "Handcraft",
+  title: "Loops And Love",
   description: "Developed by Anshumaan Gupta",
 };
 
