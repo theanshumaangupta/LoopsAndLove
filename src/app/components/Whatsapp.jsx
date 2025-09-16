@@ -32,7 +32,7 @@ const Whatsapp = () => {
                 <div className="hidden md:flex flex-col w-full md:w-1/3 bg-white border-r border-gray-200">
                     {/* Left panel header */}
                     <div className="p-4 flex items-center justify-between border-b border-gray-200">
-                        <h2 className="text-xl font-bold text-gray-800">Chats</h2>
+                        <h2 className="text-xl font-bold text-gray-800">WhatsApp Us</h2>
                     </div>
                     {/* Search bar */}
                     <div className="p-4 border-b border-gray-200">
@@ -47,7 +47,7 @@ const Whatsapp = () => {
                         <img src="https://placehold.co/40x40/c0b59b/ffffff?text=C" alt="Client Profile" className="w-10 h-10 rounded-full mr-3" />
                         <div>
                             <h3 className="font-semibold text-gray-800">Client Support</h3>
-                            <p className="text-sm text-gray-500">Hi! I'm here to help...</p>
+                            <p className="text-sm text-gray-500"> Loved The Products? Want to explore...</p>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Whatsapp = () => {
                             </div>
                         </div>
                         {/* WhatsApp Logo */}
-                        <svg className="w-6 h-6 fill-gray-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.4C339.4 55.7 283.4 33 224 33c-119.8 0-216.9 97.2-216.9 216.9 0 40.5 11.1 79.4 32.4 113.8L9.9 454.4c-3.1 9.2-.9 19.5 5.8 26.2.7.7 1.6 1.1 2.5 1.4L44.8 488c9.5 2.9 20.2-.4 26.2-6.5l82.1-82.1c32.7 17.5 70.1 26.4 108.9 26.4 119.8 0 216.9-97.2 216.9-216.9S380.9 97.4 380.9 97.4zM224 402.1c-1.2 0-2.3 0-3.5-.1-39.7-1.1-77.9-15.1-110.1-41.2L116.3 331 46.5 400.8l20.4-79.5 2.2-8.5-7.9-10c-15.6-20.7-27.1-44.4-33.8-69.8-6.1-23.7-9.2-48.4-9.2-73.4C28.2 135 129.4 34.1 251.3 34.1S474.5 135 474.5 256.9 373.3 478.7 251.3 478.7c-38.3 0-75-9.6-106.8-28.7l-94 94.1c-1.4 1.4-3.5 1.5-5 .2l-1.9-2.2c-1.6-1.5-1.7-3.9 0-5.4l91.6-91.6c-2.3-2.9-4.5-5.9-6.7-8.9-3.2-4.5-6.1-9.2-8.8-14-11.2-19.4-19.7-40.4-25.1-62.8-5.9-24.1-8.9-49.3-8.9-75.1C28.2 135 129.4 34.1 251.3 34.1 373.3 34.1 474.5 135 474.5 256.9S373.3 478.7 251.3 478.7c-38.3 0-75-9.6-106.8-28.7l-94 94.1c-1.4 1.4-3.5 1.5-5 .2l-1.9-2.2c-1.6-1.5-1.7-3.9 0-5.4l91.6-91.6zM224 402.1c-1.2 0-2.3 0-3.5-.1-39.7-1.1-77.9-15.1-110.1-41.2L116.3 331 46.5 400.8l20.4-79.5 2.2-8.5-7.9-10c-15.6-20.7-27.1-44.4-33.8-69.8-6.1-23.7-9.2-48.4-9.2-73.4C28.2 135 129.4 34.1 251.3 34.1S474.5 135 474.5 256.9 373.3 478.7 251.3 478.7c-38.3 0-75-9.6-106.8-28.7l-94 94.1c-1.4 1.4-3.5 1.5-5 .2l-1.9-2.2c-1.6-1.5-1.7-3.9 0-5.4l91.6-91.6z"/></svg>
+                        <img src="images/wp.svg" className='h-9 w-9' alt="" />
                     </div>
     
                     {/* Chat Messages Container */}
@@ -78,7 +78,12 @@ const Whatsapp = () => {
                         {/* Initial welcome message from support */}
                         <div className="flex items-start">
                             <div className="bg-gray-100 text-gray-800 p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm max-w-[80%]">
-                                Hi there! How can I help you today?
+                                Loved The Products? Want to explore more ?
+                            </div>
+                        </div>
+                        <div className="flex items-start">
+                            <div className="bg-gray-100 text-gray-800 p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl shadow-sm max-w-[80%]">
+                                Just leave a message here.
                             </div>
                         </div>
                     </div>

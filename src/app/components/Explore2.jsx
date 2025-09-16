@@ -67,58 +67,58 @@ function Explore2() {
           <p className="text-base text-center">
             Lorem ipsum dolor sit amet, adiping elit
           </p>
-<div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 w-[90vw] sm:w-[75vw] lg:w-[80vw] auto-rows-[200px] sm:auto-rows-[125px] lg:auto-rows-[300px]">
-  {/* Image 1 */}
-  <div className="relative col-span-2 row-span-2 overflow-hidden">
-    <div
-      style={{ backgroundImage: "url('images/shop-category-img-1.jpg')" }}
-      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
-    ></div>
-    <p className="absolute bottom-3 left-3 text-white font-semibold text-lg">Category 1</p>
-  </div>
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 w-[90vw] sm:w-[75vw] lg:w-[80vw] auto-rows-[200px] sm:auto-rows-[125px] lg:auto-rows-[300px]">
+            {/* Image 1 */}
+            <div className="relative col-span-2 row-span-2 overflow-hidden">
+              <div
+                style={{ backgroundImage: "url('images/shop-category-img-1.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
+              ></div>
+              <p className="absolute bottom-3 left-3 text-white font-semibold text-lg">Category 1</p>
+            </div>
 
-  {/* Image 2 */}
-  <div className="relative overflow-hidden">
-    <div
-      style={{ backgroundImage: "url('images/shop-category-img-2.jpg')" }}
-      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
-    ></div>
-    <p className="absolute bottom-3 left-3 text-white font-semibold">Category 2</p>
-  </div>
+            {/* Image 2 */}
+            <div className="relative overflow-hidden">
+              <div
+                style={{ backgroundImage: "url('images/shop-category-img-2.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
+              ></div>
+              <p className="absolute bottom-3 left-3 text-white font-semibold">Category 2</p>
+            </div>
 
-  {/* Image 3 */}
-  <div className="relative overflow-hidden">
-    <div
-      style={{ backgroundImage: "url('images/shop-category-img-3.jpg')" }}
-      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
-    ></div>
-    <p className="absolute bottom-3 left-3 text-white font-semibold">Category 3</p>
-  </div>
+            {/* Image 3 */}
+            <div className="relative overflow-hidden">
+              <div
+                style={{ backgroundImage: "url('images/shop-category-img-3.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
+              ></div>
+              <p className="absolute bottom-3 left-3 text-white font-semibold">Category 3</p>
+            </div>
 
-  {/* Image 4 */}
-  <div className="relative overflow-hidden">
-    <div
-      style={{ backgroundImage: "url('images/shop-category-img-4.jpg')" }}
-      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
-    ></div>
-    <p className="absolute bottom-3 left-3 text-white font-semibold">Category 4</p>
-  </div>
+            {/* Image 4 */}
+            <div className="relative overflow-hidden">
+              <div
+                style={{ backgroundImage: "url('images/shop-category-img-4.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
+              ></div>
+              <p className="absolute bottom-3 left-3 text-white font-semibold">Category 4</p>
+            </div>
 
-  {/* Image 5 */}
-  <div className="relative overflow-hidden">
-    <div
-      style={{ backgroundImage: "url('images/shop-category-img-5.jpg')" }}
-      className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
-    ></div>
-    <p className="absolute bottom-3 left-3 text-white font-semibold">Category 5</p>
-  </div>
-</div>
+            {/* Image 5 */}
+            <div className="relative overflow-hidden">
+              <div
+                style={{ backgroundImage: "url('images/shop-category-img-5.jpg')" }}
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 ease-in-out hover:scale-110"
+              ></div>
+              <p className="absolute bottom-3 left-3 text-white font-semibold">Category 5</p>
+            </div>
+          </div>
 
         </div>
       </div>
 
       {/* Comment Section */}
-      <div className="w-full flex justify-center items-center min-h-[50vh] bg-white">
+      <div id="reviews" className="w-full flex justify-center items-center min-h-[50vh] bg-white">
         <div className="flex flex-col md:flex-row p-[2rem] text-center justify-between items-start gap-[5rem] md:gap-[5rem] bg-white text-black">
           <div className="flex flex-col lg:flex-row items-start gap-[2rem] relative w-full">
             {/* Quote Sticker */}

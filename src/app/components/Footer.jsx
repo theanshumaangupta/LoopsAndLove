@@ -44,8 +44,8 @@ const Footer = () => {
                             <ul className="space-y-2 text-sm text-gray-600">
                                 <li><a href="#" className="hover:text-black transition-colors duration-200">Follow Us</a></li>
                                 <li><a href="#whatsapp" className="hover:text-black transition-colors duration-200">Whatsapp Us</a></li>
-                                <li><a href="#" className="hover:text-black transition-colors duration-200">Privacy Policy</a></li>
-                                <li><a href="#" className="hover:text-black transition-colors duration-200">Refund Policy</a></li>
+                                <li><a href="#reviews" className="hover:text-black transition-colors duration-200">Customer Reviews</a></li>
+                                <li><a href="#story" className="hover:text-black transition-colors duration-200">Stories</a></li>
                             </ul>
                         </div>
                     </div>

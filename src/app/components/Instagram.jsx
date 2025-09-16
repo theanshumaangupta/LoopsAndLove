@@ -79,6 +79,7 @@ function Instagram() {
 
   return (
     <div
+      id="story"
       style={{ fontFamily: "Merriweather" }}
       className="w-full gap-10 text-3xl bg-[#F3F0EC] py-30 px-5 text-[#090909] min-h-[80vh] flex flex-col items-center justify-center"
     >
